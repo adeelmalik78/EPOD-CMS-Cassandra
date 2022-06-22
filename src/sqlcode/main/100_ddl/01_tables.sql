@@ -3,6 +3,7 @@
 --changeset SteveZ:765
 CREATE TABLE person (foo VARCHAR, PRIMARY KEY (foo))
 --rollback DROP TABLE immatable;
+
 --changeset SteveZ:766
 CREATE TABLE company (foo2 VARCHAR, PRIMARY KEY (foo2))
 --rollback DROP TABLE immatable2;

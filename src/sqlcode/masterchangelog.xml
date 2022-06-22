@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <databaseChangeLog
-    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:pro="http://www.liquibase.org/xml/ns/pro"
-    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.2.xsd
-        http://www.liquibase.org/xml/ns/pro
-        http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.2.xsd "  changeLogId="4610b66b-22a4-41cf-90fb-4dd80f33212b">
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+    http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.6.xsd ">
 
 <!-- Deploy scripts from "main/100_ddl" directory -->
    <includeAll path="main/100_ddl" />
 
 <!-- Deploy scripts from "main/200_dml" directory -->
-   <includeAll path="main/200_dml" />
+   <!-- <includeAll path="main/200_dml" /> -->
+
+
+</databaseChangeLog>
