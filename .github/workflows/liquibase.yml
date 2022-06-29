@@ -41,18 +41,13 @@ jobs:
           echo LIQUIBASE_COMMAND_URL=${LIQUIBASE_COMMAND_URL}
           liquibase --version
           liquibase ${LB_ARGS} status --verbose
-          liquibase ${LB_ARGS} updateSQL
-          liquibase ${LB_ARGS} update
+          #liquibase ${LB_ARGS} updateSQL
+          #liquibase ${LB_ARGS} update
           liquibase ${LB_ARGS} history
           
         env:
             LB_VERSION: "4.11.0"
             LIQUIBASE_COMMAND_CHANGELOG_FILE: "masterchangelog.xml"
             BASEDIR: "src/sqlcode"    
-            LIQUIBASE_CLASSPATH: "postgresql-42.2.23.jar"
-            LIQUIBASE_COMMAND_URL: ${{ secrets.DB_URL }}
-            LIQUIBASE_COMMAND_USERNAME: ${{ secrets.DB_USERNAME }}
-            LIQUIBASE_COMMAND_PASSWORD: ${{ secrets.DB_PASSWORD }}
-            LIQUIBASE_PRO_LICENSE_KEY: ${{ secrets.LIQUIBASE_KEY }}
-            LIQUIBASE_HUB_API_KEY: "LM5YVxgFWNdadHmGMKdYHii-QLptWxLa4qXQQIw-ec4"
-            LIQUIBASE_HUB_MODE: "all"            
+            LIQUIBASE_DEFAULTS_FILE: dev.liquibase.properties
+            LIQUIBASE_HUB_MODE: "none"            
